@@ -1,0 +1,26 @@
+name: CICD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test1
+        run: |
+          echo "test1 출력"
+      
+      - name: test2
+        run: |
+          echo "test2 출력"
+      - name: test3
+        run: |
+          echo "test3 출력"
+    
