@@ -1,0 +1,54 @@
+spring:
+  profiles:
+    active: local
+    group:
+      local: local_server, common, secret
+      blue: blue_server, common, secret
+      green: green_server, common, secret
+
+---
+
+spring:
+  profiles:
+    active:
+      on-profile: local_server
+
+server:
+  port: 8080
+client:
+  address: http://localhost:3000
+
+---
+
+
+spring:
+  profiles:
+    active:
+      on-profile: blue_server
+
+server:
+  port: 8080
+client:
+  address: http://localhost:3000
+
+---
+
+spring:
+  profiles:
+    active:
+      on-profile: green_server
+
+server:
+  port: 9090
+client:
+  address: http://localhost:3000
+
+---
+
+spring:
+  profiles:
+    active:
+      on-profile: common
+mybatis:
+  mapper-locations:
+    - mappers/*.xml
