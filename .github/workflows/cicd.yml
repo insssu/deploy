@@ -20,7 +20,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           
-      - name: Build SpringBoot
+      - name: Build SpringBoot Server
         run: |
           echo ${{ secret.APPLICATION_SECRET }} | base64 --decode > ./src/main/resources/application-secret.yml
           chmod 700 ./mvnw
