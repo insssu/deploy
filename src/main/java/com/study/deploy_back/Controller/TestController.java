@@ -14,6 +14,6 @@ public class TestController {
 
     @GetMapping("/test")
     public ResponseEntity<?> test() {
-        return ResponseEntity.ok(clientAddress + "테스트 !");
+        return ResponseEntity.ok(clientAddress + "테스트 ! 인수");
     }
 }
