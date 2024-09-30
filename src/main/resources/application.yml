@@ -9,8 +9,8 @@ spring:
 ---
 
 spring:
-  profiles:
-    active:
+  config:
+    activate:
       on-profile: local_server
 
 server:
@@ -22,8 +22,8 @@ client:
 
 
 spring:
-  profiles:
-    active:
+  config:
+    activate:
       on-profile: blue_server
 
 server:
@@ -34,8 +34,8 @@ client:
 ---
 
 spring:
-  profiles:
-    active:
+  config:
+    activate:
       on-profile: green_server
 
 server:
@@ -46,8 +46,8 @@ client:
 ---
 
 spring:
-  profiles:
-    active:
+  config:
+    activate:
       on-profile: common
 mybatis:
   mapper-locations:
